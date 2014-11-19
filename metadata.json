@@ -1,22 +1,20 @@
 {
-  "name": "mklauber-aide",
-  "version": "1.1.0",
+  "name": "stchas-aide",
+  "version": "1.2.0",
   "summary": "A puppet module for installing and configuring aide",
-  "author": "Matthew Lauber",
-  "description": "A puppet module for setting up and configuring aide (Advanced Intrusion Detection System) via puppet.",
+  "author": "stchas",
+  "summary": "A puppet module for setting up and configuring aide (Advanced Intrusion Detection System) via puppet.",
   "dependencies": [
     {
-      "name": "puppetlabs/concat",
-      "version_requirement": "\u003e\u003d1.0.0"
+      "name": "puppetlabs/pe_concat",
+      "version_requirement": "1.1.x"
     },
     {
       "name": "puppetlabs/stdlib",
       "version_requirement": "\u003e\u003d3.0.0"
     }
   ],
-  "types": [],
-  "checksums": {},
-  "source": "https://github.com/mklauber/aide",
-  "project_page": "https://github.com/mklauber/aide",
+  "source": "https://github.com/woodsbw/puppet-aide",
+  "project_page": "https://github.com/woodsbw/puppet-aide",
   "license": "Apache Version 2.0"
 }
