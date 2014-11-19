@@ -11,7 +11,7 @@
     },
     {
       "name": "puppetlabs/stdlib",
-      "version_requirement": "\u003e\u003d3.0.0"
+      "version_requirement": "4.3.x"
     }
   ],
   "source": "https://github.com/woodsbw/puppet-aide",
