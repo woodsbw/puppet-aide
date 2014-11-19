@@ -18,7 +18,7 @@ define aide::watch ( $path = $name,
     default   => fail("Type field value ${type} is invalid.  Acceptable values are ['regular', 'equals', 'exclude']")
   }
 
-  concat::fragment { $title:
+  pe_concat::fragment { $title:
     target  => 'aide.conf',
     order   => $order,
     content => $content
