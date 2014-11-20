@@ -1,7 +1,7 @@
 # aide::rule defines a rule that should be included in the aide.conf file.
 define aide::rule (
   $rules,
-  $order = 10,
+  $order = 25,
 ) {
   include aide
 
