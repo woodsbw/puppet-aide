@@ -13,6 +13,6 @@ class aide (
   class  { '::aide::config': } ~>
   class  { '::aide::firstrun': } ->
   class  { '::aide::cron': } ->
-  class  { '::aide:default_rules' : } ->
+  class  { '::aide::default_rules' : } ->
   anchor { 'aide::end': }
 }
