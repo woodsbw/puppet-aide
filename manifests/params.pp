@@ -11,10 +11,6 @@ class aide::params {
       $aide_path = '/usr/bin/aide'
       $conf_path = '/etc/aide/aide.conf'
     }
-    'Redhat': {
-      $aide_path = '/usr/sbin/aide'
-      $conf_path = '/etc/aide.conf'
-    }
     default: {
       fail("The ${module_name} module is not supported on an ${::osfamily} based system.")
     }
