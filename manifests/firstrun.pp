@@ -4,7 +4,7 @@ class aide::firstrun inherits aide {
     command     => "${::aide::params::aide_path} --init --config ${::aide::conf_path}",
     user        => 'root',
     refreshonly => true,
-    subscribe   => Concat['aide.conf']
+    subscribe   => Pe_concat['aide.conf']
   }
 
   exec { 'install aide db':
