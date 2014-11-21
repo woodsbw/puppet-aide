@@ -3,9 +3,11 @@ class aide (
     $package      = $aide::params::package,
     $version      = $aide::params::version,
     $conf_path    = $aide::params::conf_path,
+    $autogen_conf = $aide::params::autogen_conf,
+    $cron_job     = $aide::params::cron_job,
     $db_path      = $aide::params::db_path,
     $db_temp_path = $aide::params::db_temp_path,
-    $hour         = $aide::params::hour
+    $hour         = $aide::params::hour,
   ) inherits aide::params {
 
   anchor { 'aide::begin': } ->

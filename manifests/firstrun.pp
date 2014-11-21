@@ -1,7 +1,7 @@
 # the aide::firstrun class creates the database that will be used for future checks.
 class aide::firstrun inherits aide {
   exec { 'aide init':
-    command     => "${::aide::params::aide_path} --init --config ${::aide::conf_path}",
+    command     => "${::aide::params::aide_path} --init --config ${::aide::params::autogen_conf}",
     user        => 'root',
     refreshonly => true,
     subscribe   => Pe_concat['aide.conf']
@@ -21,7 +21,7 @@ class aide::firstrun inherits aide {
     mode    => '0600',
     require => Exec['install aide db']
   }
-  file { '/var/lib/aide/aide.db.new.gz':
+  file { $::aide::db_temp_path:
     owner   => root,
     group   => root,
     mode    => '0600',
