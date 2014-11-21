@@ -11,6 +11,6 @@ class aide::config inherits aide {
   pe_concat::fragment { 'aide.conf.header':
     target  => 'aide.conf',
     order   => 01,
-    content => template( 'aide/aide.conf.erb')
+    content => template( 'aide/etc/aide/aide.conf.erb')
   }
 }
