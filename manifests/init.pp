@@ -1,13 +1,14 @@
 # the aide class manages some the configuration of aide
 class aide (
-    $package      = $aide::params::package,
-    $version      = $aide::params::version,
-    $conf_path    = $aide::params::conf_path,
-    $autogen_conf = $aide::params::autogen_conf,
-    $cron_job     = $aide::params::cron_job,
-    $db_path      = $aide::params::db_path,
-    $db_temp_path = $aide::params::db_temp_path,
-    $hour         = $aide::params::hour,
+    $package               = $aide::params::package,
+    $version               = $aide::params::version,
+    $conf_path             = $aide::params::conf_path,
+    $autogen_conf          = $aide::params::autogen_conf,
+    $cron_job              = $aide::params::cron_job,
+    $db_path               = $aide::params::db_path,
+    $db_temp_path          = $aide::params::db_temp_path,
+    $hour                  = $aide::params::hour,
+    $include_default_rules = true,
   ) inherits aide::params {
 
   anchor { 'aide::begin': } ->
@@ -15,4 +16,8 @@ class aide (
   class  { '::aide::config': } ~>
   class  { '::aide::firstrun': } ->
   anchor { 'aide::end': }
+  
+  if $include_default_rules {
+    include aide::default_rules
+  }
 }
