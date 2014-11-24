@@ -1,0 +1,3 @@
+/@@{RUN}/mdadm/monitor\.pid$ VarFile
+/run/mdadm/md[0-9]+-uevent$ VarInode
+/@@{RUN}/mdadm$ VarDirInode

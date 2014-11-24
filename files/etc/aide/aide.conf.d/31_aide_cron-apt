@@ -1,0 +1,10 @@
+/var/lib/cron-apt/_-_etc_-_cron-apt_-_config/mailchanges/(0-update-update_-o_quiet=2|3-download-dist-upgrade_-d_-y_-o_APT::Get::Show-Upgraded=true|3-download-autoclean_-y)$ VarFile
+!/var/lib/cron-apt/lockfile$
+/var/lib/cron-apt$ VarDir
+!/tmp/cron-apt\.[a-zA-Z0-9]{6}$
+!/tmp/cron-apt\.[a-zA-Z0-9]{6}/initlog$
+/var/log/cron-apt/log$ Log
+/var/log/cron-apt/log\.1\.gz$ LoSerMemberLog
+/var/log/cron-apt/log\.[23]\.gz$ SerMemberLog
+/var/log/cron-apt/log\.4\.gz$ HiSerMemberLog
+/var/log/cron-apt$ VarDir

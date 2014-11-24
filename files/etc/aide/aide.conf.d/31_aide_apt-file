@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+. "$UPAC_settingsd/10_aide_sourceslist"
+
+cat $SOURCESLIST | sed 's/ #.*$//' | while read deb uri dist comp; do
+    PROTOCOL="$(echo $uri | sed 's|\([^:]\+\).*|\1|')"
+    HOST="$(echo $uri | sed 's|.*//\([^/[:space:]]\+\).*|\1|')"
+    HOSTPATH="$(echo $uri | sed 's|.*//[^/[:space:]]\+/\?||;s|/$||;s|/|_|g;s|^\(.\+\)$|_\1|')"
+    if [ "$PROTOCOL" = "http" ] || [ "$PROTOCOL" = "ftp" ]; then
+        echo "/var/cache/apt/apt-file/"${HOST//\./\\\.}${HOSTPATH}"_dists_"${dist//\//_}"_Contents-@@{ARCH}\.(gz|IndexDiff)$ VarFile"
+    fi
+done
+
+echo "/var/cache/apt/apt-file$ VarDir"

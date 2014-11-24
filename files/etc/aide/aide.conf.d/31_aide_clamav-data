@@ -1,0 +1,9 @@
+/etc/cron\.daily$ VarDir
+!/usr/share/doc/clamav-data/(README\.Debian|copyright|changelog\.gz)$
+/usr/share/doc/clamav-data$ VarDir
+!/var/lib/dpkg/info/clamav-data\.(config|list|post(inst|rm)|templates|conffiles|md5sums)$
+/var/lib/clamav/(daily|main)\.c[vl]d$ VarFile
+/var/lib/clamav$ VarDir
+/var/lib/clamav-data/warn-on-old-databases$ VarFile
+/var/lib/clamav-data$ VarDir
+/var/cache/apt/archives/clamav-data_[0-9]{8}\.[0-9]{6}\.[0-9]{4}_all\.deb$ VarFile+ANF+ARF

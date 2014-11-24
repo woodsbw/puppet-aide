@@ -1,0 +1,2 @@
+/@@{RUN}/laptop-mode-tools/(state|enabled|start-stop-undo-actions)$ VarFile
+/@@{RUN}/laptop-mode-tools$ VarDirInode

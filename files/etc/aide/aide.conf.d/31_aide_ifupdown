@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# This file by default acts for Debian etch, where the ifstate file
+# is in /etc/network/run/ifstate. Set DISTRIBUTION="sarge" for sarge systems
+# with ifstate file at /etc/network/ifstate.
+DISTRIBUTION=""
+IFSTATE="/etc/network/run/ifstate"
+
+if [ "$DISTRIBUTION" = "sarge" ]; then
+  IFSTATE="/etc/network/ifstate"
+fi
+
+if [ -h "$IFSTATE" ]; then
+  IFSTATE="$(readlink --canonicalize /etc/network/run/ifstate)"
+fi  
+
+if [ -f "$IFSTATE" ]; then
+  echo "${IFSTATE}$ VarFile"
+  echo "$(dirname $IFSTATE)$ VarDir"
+fi

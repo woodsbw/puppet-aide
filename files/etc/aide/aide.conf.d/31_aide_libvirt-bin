@@ -1,0 +1,6 @@
+/var/(lib|cache)/libvirt/qemu$ VarDir
+/@@{RUN}/libvirtd\.pid$ VarFile
+/@@{RUN}/libvirt/libvirt-sock(-ro)?$ VarFile
+/var/lib/libvirt/qemu/(save|snapshot)$ VarDir
+/@@{RUN}/libvirt/qemu/[-[:alnum:]]+\.(pid|xml)$ VarFile
+/@@{RUN}/libvirt(/qemu)?$ VarDirInode

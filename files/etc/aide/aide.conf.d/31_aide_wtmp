@@ -1,0 +1,5 @@
+/var/log/wtmp$ Log
+/var/log/wtmp\.1$ LowLog
+/var/log/wtmp\.2\.gz$ LoSerMemberLog
+/var/log/wtmp\.[345]+\.gz$ SerMemberLog
+/var/log/wtmp\.6\.gz$ HiSerMemberLog
